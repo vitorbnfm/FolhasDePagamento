@@ -12,3 +12,4 @@ Content-Type: application/json
 
 ### Listar folhas
 GET https://localhost:5001/api/folha/list
+

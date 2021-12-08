@@ -20,6 +20,23 @@ namespace API.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Folha folha)
         {   
+
+            var mes = _context.Folhas.FirstOrDefault(
+                f => f.Mes == folha.Mes
+            );
+            var ano = _context.Folhas.FirstOrDefault(
+                f => f.Ano == folha.Ano
+            );
+
+            if (ano != null)
+            {
+                if (mes != null)
+                {
+                    return BadRequest(new { message = "A folha digitado já existe." });
+                }
+            }
+
+
             int funcionarioId = folha.FuncionarioId;
             folha.Funcionario = _context.Funcionarios.Find(funcionarioId);
             _context.Folhas.Add(folha);
