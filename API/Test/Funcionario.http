@@ -1,0 +1,11 @@
+### cadastrar funcionarios
+POST https://localhost:5001/api/funcionario/create
+Content-Type: application/json
+
+{
+    "Nome" : "Vitor",
+    "Setor" : "TI"
+}
+
+### Listar usuarios
+GET https://localhost:5001/api/funcionario/list

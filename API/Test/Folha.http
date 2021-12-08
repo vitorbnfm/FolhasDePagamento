@@ -1,0 +1,14 @@
+### cadastrar folhas
+POST https://localhost:5001/api/folha/create
+Content-Type: application/json
+
+{
+    "HoraTrabalhada" : 40,
+    "ValorHora" : 10,
+    "Mes" : 12,
+    "Ano" : 2021,
+    "FuncionarioId" : "1"
+}
+
+### Listar folhas
+GET https://localhost:5001/api/folha/list
