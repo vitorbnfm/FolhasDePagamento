@@ -1,0 +1,13 @@
+
+.container {
+    height: calc(100% - 64px);
+}
+.icon {
+    margin-right: 10px;
+}
+.content {
+    padding: 16px;
+}
+.title {
+    font-size: 1.1em;
+}

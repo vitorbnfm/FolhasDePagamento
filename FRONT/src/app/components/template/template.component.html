@@ -1,0 +1,29 @@
+<mat-toolbar color="warn">
+    <button (click)="sidenav.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Folha de pagamento</span>
+</mat-toolbar>
+<mat-sidenav-container class="container">
+    <mat-sidenav #sidenav mode="side">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/folha/cadastrar">
+                <mat-icon class="icon">add</mat-icon>Nova folha</a
+            >
+            <a mat-list-item routerLink="/folha/listar">
+                <mat-icon class="icon">list</mat-icon>Listar folhas</a
+            >
+            <a mat-list-item routerLink="/funcionario/listar">
+                <mat-icon class="icon">list</mat-icon>Listar funcionario</a
+            >
+            <a mat-list-item routerLink="/funcionario/cadastrar">
+                <mat-icon class="icon">add</mat-icon>Novo funcionario</a
+            >
+
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
