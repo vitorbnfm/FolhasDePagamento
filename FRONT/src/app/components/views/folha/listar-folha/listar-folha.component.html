@@ -2,11 +2,16 @@
     <mat-icon mat-list-icon>add</mat-icon>
     Nova Folha</a
 >
+<a mat-raised-button color="primary" routerLink="/folha/deletar">
+    <mat-icon mat-list-icon>delete</mat-icon>
+    deletar</a
+>
 <table mat-table [dataSource]="folhas" class="table mat-elevation-z8">
     <!-- Coluna do Id -->
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>#</th>
         <td mat-cell *matCellDef="let folha">{{ folha.id }}</td>
+        
     </ng-container>
     <!-- Coluna do horatrabalhada -->
     <ng-container matColumnDef="horatrabalhada">
@@ -15,13 +20,16 @@
     </ng-container>
     <!-- Coluna do valorhora -->
     <ng-container matColumnDef="valorhora">
-        <th mat-header-cell *matHeaderCellDef>valor hora</th>
-        <td mat-cell *matCellDef="let folha">{{ folha.valorhora }}</td>
+        <th mat-header-cell *matHeaderCellDef>valorhora</th>
+        <td mat-cell *matCellDef="let folha">
+            {{ folha.valorhora }}
+        </td>
     </ng-container>
     <!-- Coluna do mes -->
     <ng-container matColumnDef="mes">
         <th mat-header-cell *matHeaderCellDef>mes</th>
         <td mat-cell *matCellDef="let folha">{{ folha.mes }}</td>
+        
     </ng-container>
     <!-- Coluna do ano -->
     <ng-container matColumnDef="ano">
@@ -35,6 +43,16 @@
             {{ folha.funcionario!.nome }}
         </td>
     </ng-container>
+        <!-- Coluna do setor -->
+        <ng-container matColumnDef="setor">
+            <th mat-header-cell *matHeaderCellDef>setor</th>
+            <td mat-cell *matCellDef="let folha">
+                {{ folha.funcionario!.setor }}
+            </td>
+        </ng-container>
+
+
     <tr mat-header-row *matHeaderRowDef="colunasExibidas"></tr>
     <tr mat-row *matRowDef="let row; columns: colunasExibidas"></tr>
 </table>
+

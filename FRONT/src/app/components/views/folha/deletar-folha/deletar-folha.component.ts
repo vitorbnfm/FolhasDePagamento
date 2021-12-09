@@ -1,4 +1,7 @@
+import { FolhaService } from './../../../../services/folha.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Folha } from 'src/app/models/folha';
 
 @Component({
   selector: 'app-deletar-folha',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./deletar-folha.component.css']
 })
 export class DeletarFolhaComponent implements OnInit {
+  folhas!: Folha[];
 
-  constructor() { }
+  constructor(
+      private folhaService: FolhaService,
+      private router: Router
+  ) {}
 
   ngOnInit(): void {
+      this.folhaService.list().subscribe((folhas) => {
+          this.folhas = folhas;
+      });
   }
 
+  deletar(id:any): void {
+    this.folhaService.delete(id).subscribe((folhas) => {
+      this.folhas = folhas;
+  });
+  }
 }

@@ -16,6 +16,8 @@ export class ListarFolhaComponent implements OnInit {
       "mes",
       "ano",
       "funcionario",
+      "setor",
+             
   ];
 
   constructor(private service: FolhaService) {}
