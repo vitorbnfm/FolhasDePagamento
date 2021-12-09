@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "Nome" : "Vitor",
-    "Setor" : "TI"
+    "Setor" : "Dev"
 }
 
 ### Listar usuarios

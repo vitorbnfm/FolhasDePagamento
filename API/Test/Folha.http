@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "HoraTrabalhada" : 200,
-    "ValorHora" : 20,
+    "ValorHora" : 200,
     "Mes" : 12,
     "Ano" : 2021,
     "FuncionarioId" : "1"
@@ -13,3 +13,8 @@ Content-Type: application/json
 ### Listar folhas
 GET https://localhost:5001/api/folha/list
 
+### Buscar folha pelo id
+GET https://localhost:5001/api/folha/getbyid/1
+
+### Deletar produto
+DELETE https://localhost:5001/api/folha/delete/1

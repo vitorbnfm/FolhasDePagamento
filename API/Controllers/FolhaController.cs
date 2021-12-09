@@ -52,10 +52,26 @@ namespace API.Controllers
                 .Include(Folha => Folha.Funcionario)                
                 .ToList());
     
-    
+
+        //GET: api/folha/getbyid/1
+        [HttpGet]
+        [Route("getbyid/{id}")]
+        public IActionResult GetById([FromRoute] int id)
+        {
+            //Buscar um produto pela chave primária
+            Folha folha = _context.Folhas.Find(id);
+            if (folha == null)
+            {
+                return NotFound();
+            }
+            return Ok(folha);
+        }
+
+
+
         //DELETE: api/folha/delete
         [HttpDelete]
-        [Route("folha/{id}")]
+        [Route("delete/{id}")]
         public IActionResult Delete([FromRoute] int id)
         {
             Folha folha = _context.Folhas.FirstOrDefault
