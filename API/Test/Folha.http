@@ -3,8 +3,8 @@ POST https://localhost:5001/api/folha/create
 Content-Type: application/json
 
 {
-    "HoraTrabalhada" : 40,
-    "ValorHora" : 10,
+    "HoraTrabalhada" : 200,
+    "ValorHora" : 20,
     "Mes" : 12,
     "Ano" : 2021,
     "FuncionarioId" : "1"
