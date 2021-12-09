@@ -22,9 +22,10 @@ export class DeletarFolhaComponent implements OnInit {
       });
   }
 
-  deletar(id:any): void {
-    this.folhaService.delete(id).subscribe((folhas) => {
-      this.folhas = folhas;
+  deletar(id: any): void {
+    this.folhaService.delete(id).subscribe((res) => {
+      alert("Folha deletada");
+      location.reload();
   });
   }
 }

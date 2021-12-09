@@ -2,8 +2,8 @@ import { Funcionario } from "./funcionario";
 
 export interface Folha {
     id?: number;
-    horatrabalhada: number;
-    valorhora: number;
+    horaTrabalhada: number;
+    valorHora: number;
     mes: number;
     ano: number;
     funcionario?: Funcionario;

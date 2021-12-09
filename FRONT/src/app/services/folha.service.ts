@@ -17,8 +17,10 @@ export class FolhaService {
   list(): Observable<Folha[]> {
       return this.http.get<Folha[]>(`${this.baseURL}/list`);
   }
-  public delete(id: string): Observable<any> {
+  delete(id: any): Observable<any> {
     return this.http.delete<Folha>(`${this.baseURL}/delete/${id}`);
   }
+
+  
 
 }

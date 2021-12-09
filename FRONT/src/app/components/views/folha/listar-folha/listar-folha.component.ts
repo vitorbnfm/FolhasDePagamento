@@ -11,8 +11,8 @@ export class ListarFolhaComponent implements OnInit {
   folhas: Folha[] = [];
   colunasExibidas: String[] = [
       "id",
-      "horatrabalhada",
-      "valorhora",
+      "horaTrabalhada",
+      "valorHora",
       "mes",
       "ano",
       "funcionario",

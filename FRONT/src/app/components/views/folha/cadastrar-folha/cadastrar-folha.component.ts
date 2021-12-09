@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./cadastrar-folha.component.css']
 })
 export class CadastrarFolhaComponent implements OnInit {
-  horatrabalhada!: number;
-  valorhora!: number;
+  horaTrabalhada!: number;
+  valorHora!: number;
   mes!: number;
   ano!: number;
   funcionarios!: Funcionario[];
@@ -32,11 +32,11 @@ export class CadastrarFolhaComponent implements OnInit {
 
   cadastrar(): void {
       let folha: Folha = {
-          horatrabalhada: this.horatrabalhada,
-          valorhora: this.valorhora,
-          mes: this.mes,
-          ano: this.ano,
-          funcionarioId: this.funcionarioId,
+        horaTrabalhada: this.horaTrabalhada,
+        valorHora: this.valorHora,
+        mes: this.mes,
+        ano: this.ano,
+        funcionarioId: this.funcionarioId,
       };
       this.folhaService.create(folha).subscribe((folha) => {
           console.log(folha);

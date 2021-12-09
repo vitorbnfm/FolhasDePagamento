@@ -13,16 +13,16 @@
         <td mat-cell *matCellDef="let folha">{{ folha.id }}</td>
         
     </ng-container>
-    <!-- Coluna do horatrabalhada -->
-    <ng-container matColumnDef="horatrabalhada">
+    <!-- Coluna do horaTrabalhada -->
+    <ng-container matColumnDef="horaTrabalhada">
         <th mat-header-cell *matHeaderCellDef>horas trabalhadas</th>
-        <td mat-cell *matCellDef="let folha">{{ folha.horatrabalhada }}</td>
+        <td mat-cell *matCellDef="let folha">{{ folha.horaTrabalhada }}</td>
     </ng-container>
-    <!-- Coluna do valorhora -->
-    <ng-container matColumnDef="valorhora">
-        <th mat-header-cell *matHeaderCellDef>valorhora</th>
+    <!-- Coluna do valorHora -->
+    <ng-container matColumnDef="valorHora">
+        <th mat-header-cell *matHeaderCellDef>valor hora</th>
         <td mat-cell *matCellDef="let folha">
-            {{ folha.valorhora }}
+            {{ folha.valorHora }}
         </td>
     </ng-container>
     <!-- Coluna do mes -->
