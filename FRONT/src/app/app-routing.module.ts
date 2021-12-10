@@ -1,3 +1,4 @@
+import { DetalharFolhaComponent } from './components/views/folha/detalhar-folha/detalhar-folha.component';
 import { CadastrarFuncionarioComponent } from './components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 import { DeletarFolhaComponent } from './components/views/folha/deletar-folha/deletar-folha.component';
 import { ListarFuncionarioComponent } from './components/views/funcionario/listar-funcionario/listar-funcionario.component';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "folha/deletar",
     component: DeletarFolhaComponent,
+  },
+  {
+    path: "folha/detalhar/:id",
+    component: DetalharFolhaComponent,
   },
 
   {

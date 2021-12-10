@@ -22,6 +22,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { DeletarFolhaComponent } from './components/views/folha/deletar-folha/deletar-folha.component';
 import { TemplateComponent } from './components/template/template.component';
+import { DetalharFolhaComponent } from './components/views/folha/detalhar-folha/detalhar-folha.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { TemplateComponent } from './components/template/template.component';
     CadastrarFolhaComponent,
     ListarFolhaComponent,
     DeletarFolhaComponent,
-    TemplateComponent
+    TemplateComponent,
+    DetalharFolhaComponent
     
   ],
   imports: [
